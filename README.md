@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="/.github/logo.png" alt="Project logo"></a>
+ <img src="/.github/logo.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Foodfy 1.0</h3>
@@ -8,14 +8,16 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/lpaulovt/Foodfy/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/lpaulovt/Foodfy/pulls)
+
+  [![GitHub Issues](https://img.shields.io/github/issues/lpaulovt/Foodfy.svg)](https://github.com/lpaulovt/Foodfy/issues)
+
+  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/lpaulovt/Foodfy.svg)](https://github.com/lpaulovt/Foodfy/pulls)
 </div>
 
 ---
 
 <h4 align="center">
-  Foodfy | Recipe site
+  Website to share recipes
 </h4>
 
 ## 🧐 About 
@@ -26,7 +28,7 @@
 ## ⛏️ Built Using 
 - [HTML]() - Markup Language
 - [CSS]() - Style Sheet Language
-- [JavaScript] - Programming Language
+- [JavaScript] () - Programming Language
 - [Nunjucks]() - Template Engine
 - [Express](https://expressjs.com/) - Server Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
