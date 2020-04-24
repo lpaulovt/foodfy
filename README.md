@@ -28,7 +28,7 @@
 ## ⛏️ Built Using 
 - [HTML]() - Markup Language
 - [CSS]() - Style Sheet Language
-- [JavaScript] () - Programming Language
+- [JavaScript]() - Programming Language
 - [Nunjucks]() - Template Engine
 - [Express](https://expressjs.com/) - Server Framework
 - [NodeJs](https://nodejs.org/en/) - Server Environment
