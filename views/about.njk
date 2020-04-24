@@ -1,0 +1,17 @@
+{% extends "layout.njk" %}
+{% block head %}
+    <title> Sobre - Foodfy</title>
+{% endblock %}
+
+{% block content %}
+        <main class="about">
+
+            {% for section in aboutdata %}
+
+            <h1 class="content__title">{{section.title}}</h1>
+            <p class="content__paragraph">{{section.paragraph}}</p>
+            
+            {% endfor %}
+            
+            </main>    
+{% endblock %}

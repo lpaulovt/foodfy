@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    {% block head %}
+
+    {% endblock%}
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <nav>
+                <a href="/"><img src="/assets/logo.png" alt="Logo da Foodfy" class="nav__logo"></a>
+                <a href="/about" class="nav__item">Sobre</a>
+                <a href="/recipes" class="nav__item">Receitas</a>
+            </nav>
+        </header>
+
+        {% block content %}  
+      
+        {% endblock %}
+    </div>
+        <footer>
+            <span class="footer__span">Todos direitos reservados, receitas Foodfy.</span>
+        </footer>
+      
+        {% block modal %}
+        {% endblock%}
+</body>
+</html>

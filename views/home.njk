@@ -1,0 +1,72 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>Home - Foodfy</title>
+{% endblock %}
+
+{% block content %}
+    <main>
+        <div class="content__container">
+
+            <div class="content__container-info">
+                <h1>{{homeData.title}}</h1>
+                <h2>{{homeData.description}}</h2>
+            </div>
+
+            <div class="content__container-image">
+                <img src="{{homeData.image}}" alt="Ilustração de um cozinheiro">
+            </div>
+
+        </div>
+
+        <div class="content__most-accessed">
+
+            <div class="content__most-accessed-title">
+                <h1>Mais acessadas</h1>
+            </div>
+
+            <div class="content__most-accessed-recipes">
+
+            {% for recipe in mostAccessedRecipes %}
+
+                <div class="recipe" id="{{recipe.id}}">
+                    <div class="recipe__image-container">
+                        <img src="/assets/{{recipe.id}}.png" alt="Imagem do {{recipe.title}}">
+                    </div>
+
+                    <div class="recipe__content">
+                        <p class="recipe__title">{{recipe.title}}</p>
+                        <p class="recipe__author">por {{recipe.author}}</p>
+                    </div>
+                </div>
+
+            {% endfor %}
+
+            </div>
+
+        </div>
+    </main>
+</div>
+{% endblock %}
+
+{% block modal %}
+<div class="modal-overlay">
+
+    <div class="modal">
+        <div class="modal__content-image">
+            <img src="/public/assets/burger.png" alt="Imagem do Triplo bacon burger">
+        </div>
+
+        <div class="modal__content-info">
+            <h1 class="title">Triplo bacon burger
+            </h1>
+            <p class="author">por Jorge Relato</p>
+        </div>
+
+        <a class="close">Fechar modal</a>
+    </div>
+
+</div>
+
+<script src="/scripts.js"></script>
+{% endblock %}
