@@ -1,31 +1,38 @@
-// Modal Overlay
-const modalOverlay = document.querySelector('.modal-overlay');
-// Modal
-const modal = document.querySelector('.modal');
-//Get all recipes
+//Active Menu - WORKING
+const currentPage = location.pathname;
+const navItems = document.querySelectorAll('.nav__item')
+
+for(const nav of navItems) {
+    const href = nav.querySelector('a').getAttribute('href');
+
+    if(currentPage.includes(href)){
+        nav.classList.add( 'active');
+    }
+}
+
+//Get id of recipe
+
 const recipes = document.querySelectorAll('.recipe');
-// Close modal button
-const closeModal = document.querySelector('.close');
-
-for (let recipe of recipes) {
-    recipe.addEventListener('click', function () {
-        modalOverlay.classList.add('active');
-        modal.querySelector('.modal__content-image img').src = recipe.querySelector('.recipe__image-container img').src;
-        modal.querySelector('.modal__content-image img').alt = recipe.querySelector('.recipe__image-container img').alt;
-
-        modal.querySelector('.modal__content-info .title').innerHTML  = recipe.querySelector('.recipe__content .recipe__title').innerHTML;
-        modal.querySelector('.modal__content-info .author').innerHTML  = recipe.querySelector('.recipe__content .recipe__author').innerHTML;
-
+for (let recipe of recipes ){
+    recipe.addEventListener('click', function(){
+        window.location.href=`/recipes/${recipe.getAttribute('id')}`
     })
 }
 
-closeModal.addEventListener('click', function() {
-    modalOverlay.classList.remove('active');
+// Hide/Show button 
 
-    modal.querySelector('.modal__content-image img').src = '';
-    modal.querySelector('.modal__content-image img').alt = '';
+const sections = document.querySelectorAll('.sections');
 
-    modal.querySelector('.modal__content-info .title').innerHTML  = '';
-    modal.querySelector('.modal__content-info .author').innerHTML  = '';
+for (let section of sections){
 
-})
+    const btnHeader = section.querySelector('.section__btn');
+
+    btnHeader.addEventListener('click', function(){
+        const sectionContent = section.querySelector('.section__content')
+
+        sectionContent.classList.toggle('hide')
+
+        btnHeader.innerHTML = sectionContent.classList.contains('hide') ? 'Mostrar' : 'Esconder';
+    })
+
+}

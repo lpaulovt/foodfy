@@ -1,0 +1,65 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+    <title>{{recipe.title}}</title>
+{% endblock %}
+
+{% block content %}
+
+    <main class="about-recipe">
+
+        <div class="recipe-image">
+            <img src="{{recipe.image}}" alt="Imagem do {{recipe.title}}">
+        </div>
+
+        <div class="recipe-content">
+
+            <div class="recipe-title">
+                <h1>{{recipe.title}}</h1>
+                <h2>por {{recipe.author}}</h2>
+            </div>
+
+            <section class="sections">
+                <div class="section__header">
+                    <h2 >Ingredientes</h2>
+                    <span class="section__btn" id="ingredients__btn">Esconder</span>
+                </div>
+
+                <div class="section__content" id="ingredients__content">
+                    <ul class="ingredients">
+                    {% for ingredient in recipe.ingredients %}
+                        <li class="ingredient">{{ingredient}}.</li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </section>
+
+            <section class="sections">
+                <div class="section__header">
+                    <h2 >Modo de preparo</h2>
+                    <span class="section__btn" id="preparation__btn">Esconder</span>
+                </div>
+
+                <div class="section__content" id="preparation__content">
+                    <ol class="steps__preparation-mode">
+                    {% for step in recipe.preparation %}
+                        <li class="step">{{step}}</li>
+                    {% endfor %}
+                    </ol>
+                </div>
+            </section>
+            
+            <section class="sections">
+                <div class="section__header">
+                    <h2 >Informações adicionais</h2>
+                    <span class="section__btn" id="additional-info__btn">Esconder</span>
+                </div>
+
+                <div class="section__content" id="additional-info__content">
+                    <p>{{recipe.information}}</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+{% endblock %}
