@@ -19,7 +19,7 @@ Foodfy 1.0 | Website to share recipes
 
 ## 🧐 About 
 <div align="center">
-  <img src="/.github/foodfy-1.0.gif">
+  <img src="/.github/foodfy-2.0.gif">
 </div>
 
 ## ⛏️ Built Using 

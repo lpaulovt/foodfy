@@ -28,7 +28,7 @@ nav {
 .nav__logo {
     width: 90.6px;
     height: 26.9px;
-    padding-right: 122.4px;
+    margin-right: 122.4px;
 }
 
 .nav__item {
@@ -39,7 +39,7 @@ nav {
     padding-right: 30px;
 }
 
-.nav__item .active{
+.nav__item:hover {
     font-weight: bold;
 }
 

@@ -1,15 +1,3 @@
-//Active Menu - WORKING
-const currentPage = location.pathname;
-const navItems = document.querySelectorAll('.nav__item')
-
-for(const nav of navItems) {
-    const href = nav.querySelector('a').getAttribute('href');
-
-    if(currentPage.includes(href)){
-        nav.classList.add( 'active');
-    }
-}
-
 //Get id of recipe
 
 const recipes = document.querySelectorAll('.recipe');
