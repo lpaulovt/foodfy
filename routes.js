@@ -1,29 +1,26 @@
 const express = require('express')
 const routes = express.Router()
 
-
-const recipes = require('./recipes-data')
-const homeRecipes = recipes.slice(0,6)
-
-const aboutdata = require('./about-data')
+const data = require('./data.json')
+const homeRecipes = data.recipes.slice(0,6)
 
 
 routes.get('/', function(req, res){
-    return res.render('home', {homeRecipes: homeRecipes, homeData})
+    return res.render('home', {homeRecipes: homeRecipes, homeData: data.home})
  })
 
 routes.get('/about', function(req, res){
-    return res.render('about', {aboutdata})
+    return res.render('about', {aboutdata: data.about})
 })
 
 routes.get('/recipes', function(req, res){
-    return res.render('recipes', {recipes})
+    return res.render('recipes', {recipes: data.recipes})
 })
 
 routes.get('/recipes/:id', function(req, res){
     const id = req.params.id;
 
-    const recipe = recipes.find( recipe => {
+    const recipe = data.recipes.find( recipe => {
         return recipe.id == id;
     })
 
