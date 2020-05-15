@@ -12,8 +12,6 @@ nunjucks.configure("views", {
     express:server
 })
 
- //Ro
-
 server.listen(5000, function(){
     console.log('Server is running.')
  })

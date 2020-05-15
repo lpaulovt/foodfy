@@ -9,14 +9,6 @@ const aboutdata = require('./about-data')
 
 
 routes.get('/', function(req, res){
-
-    const homeData = {
-        title: 'As melhores receitas',
-        description: 'Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.',
-        image: '/assets/chef.png'
-    }
-    
-
     return res.render('home', {homeRecipes: homeRecipes, homeData})
  })
 
